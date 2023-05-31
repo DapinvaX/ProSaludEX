@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-light" style="">
+  <a routerLink="/inicio" class="navbar-brand">
+
+    <img src="../images/ritmo-cardiacoSinFondo.png" class="img-responsive" alt="">
+
+  </a>
+  <a routerLink="/inicio" class="btn btn-link text-info text-decoration-none btn-lg mt-2">ProSaludEX<br></a>
+
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar6">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar6">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a routerLink="/sobre-nosotros" class="nav-link">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/servicios" class="nav-link">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/profesionales" class="nav-link">Profesionales</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav" >
+        <form id="login" class="form-inline" method="post" action="/login-registro/login.php">
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="First name">
+          </mat-form-field>
+
+
+          <button class="btn btn btn-info my-2 my-sm-0" type="submit">Iniciar sesión</button>
+        </form>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [formControl]="emailFormControl">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Por favor, introduzca una direción de email válida
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </mat-form-field>
+        </form>
+        <a routerLink="/registro" class="btn btn-link" role="button">Regístrate</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
