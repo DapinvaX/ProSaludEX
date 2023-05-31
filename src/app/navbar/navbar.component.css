@@ -1,0 +1,8 @@
+.navbar-transparent {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+input[type="text"], input[type="password"] {
+  width: 150px;
+}
