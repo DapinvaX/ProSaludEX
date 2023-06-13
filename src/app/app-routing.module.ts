@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //Mis Import
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'profesionales', component: ProfesionalesComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'inicio'  , component: InicioComponent},
+  { path: '**', redirectTo: 'inicio'}
 
 ];
 

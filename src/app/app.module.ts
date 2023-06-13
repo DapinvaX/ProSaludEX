@@ -30,6 +30,8 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     RegistroComponent,
     NavbarComponent,
     CarruselComponent,
-    InicioComponent
+    InicioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     MdbScrollspyModule,
     MdbTabsModule,
     MdbTooltipModule,
-    MdbValidationModule
+    MdbValidationModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

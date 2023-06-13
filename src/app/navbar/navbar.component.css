@@ -6,3 +6,7 @@
 input[type="text"], input[type="password"] {
   width: 150px;
 }
+
+.inpEmail{
+  margin-right: 15px;
+}

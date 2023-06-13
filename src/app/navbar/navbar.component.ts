@@ -8,7 +8,9 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
-  hide = true;
+  password = new FormControl('', [Validators.required]);
+
+  hidePassword = true;
 
   emailFormControl = new FormControl('', [
     Validators.required,
