@@ -66,3 +66,39 @@ app.post('/login', (req, res) => {
   }
   )}
   );
+// Ruta para manejar el registro de usuarios
+
+    app.post('/register', (req, res) => {
+      const { usuario, contraseña } = req.body;
+
+      // Verifica si el usuario existe en la base de datos
+      const checkUserQuery = 'SELECT * FROM usuarios WHERE usuario = ?';
+      db.query(checkUserQuery, [usuario], (err, results) => {
+        if (err) {
+          throw err;
+        }
+
+        if (results.length > 0) {
+          res.status(409).send('Usuario ya existe');
+          return;
+        }
+
+        // Crea un hash de la contraseña ingresada
+        bcrypt.hash(contraseña, 10, (err, hash) => {
+          if (err) {
+            throw err;
+          }
+
+          // Almacena el usuario en la base de datos
+          const insertUserQuery = 'INSERT INTO usuarios (usuario, contraseña) VALUES (?, ?)';
+          db.query(insertUserQuery, [usuario, hash], (err, results) => {
+            if (err) {
+              throw err;
+            }
+
+            res.send('Usuario registrado');
+          });
+        });
+      });
+    }
+    );
