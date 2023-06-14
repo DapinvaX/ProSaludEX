@@ -32,6 +32,7 @@ import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     CarruselComponent,
     InicioComponent,
-    FooterComponent
+    FooterComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
