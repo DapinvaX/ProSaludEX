@@ -25,7 +25,8 @@
 
       </ul>
       <ul class="navbar-nav" >
-        <form id="login" class="form-inline" method="post" action="../login.ts">
+
+        <form id="login" class="form-inline" (ngSubmit)="login()"> <!-- (ngSubmit)="login()" -->
 
           <mat-form-field class="inpEmail">
             <input matInput class="rounded" placeholder="Email" [formControl]="emailFormControl">
