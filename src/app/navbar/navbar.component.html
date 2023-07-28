@@ -1,0 +1,105 @@
+<!-- <nav class="navbar navbar-expand-md navbar-light" style="">
+  <a routerLink="/inicio" class="navbar-brand">
+
+    <img src="../images/ritmo-cardiacoSinFondo.png" class="img-responsive" alt="">
+
+  </a>
+  <a routerLink="/inicio" class="btn btn-link text-info text-decoration-none btn-lg mt-2">ProSaludEX<br></a>
+
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar6">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar6">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a routerLink="/sobre-nosotros" class="nav-link">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/servicios" class="nav-link">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/profesionales" class="nav-link">Profesionales</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav" >
+
+        <form id="login" class="form-inline" (ngSubmit)="login()"> <-!-- (ngSubmit)="login()" --,>
+
+          <mat-form-field class="inpEmail">
+            <input matInput class="rounded" placeholder="Email" [formControl]="emailFormControl">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Por favor, introduzca un email válido
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Campo <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input matInput class="rounded" [type]="hidePassword ? 'password' : 'text'" [formControl]="password">
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="hidePassword ? 'Mostrar contraseña' : 'Ocultar contraseña'">
+              <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+              La contraseña es requerida.
+            </mat-error>
+          </mat-form-field>
+
+           <button type="submit" class="btn btn-info">Iniciar Sesión</button>
+
+        </form>
+        <a routerLink="/registro" class="btn btn-link text-info"  role="button">Regístrate</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+ -->
+ <nav class="navbar">
+  <div class="navbar-left">
+    <a routerLink="../inicio" class="navbar-brand text-info text-decoration-none" style="font-family: 'Roboto', sans-serif;">
+      <img src="../images/ritmo-cardiacoSinFondo.png" alt="">
+      <b>ProSaludEX</b>
+    </a>
+  </div>
+  <div class="navbar-center">
+    <ul class="navbar-links">
+      <li><a routerLink="../sobre-nosotros">Sobre Nosotros</a></li>
+      <li><a routerLink="../servicios">Servicios</a></li>
+      <li><a routerLink="../profesionales">Profesionales</a></li>
+    </ul>
+  </div>
+  <div class="navbar-right">
+
+
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="input-container">
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput formControlName="email" type="email">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">El correo electrónico es requerido</mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">El correo electrónico no es válido</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="input-field">
+          <mat-label>Contraseña</mat-label>
+          <input matInput formControlName="password" type="password">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">La contraseña es requerida</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid" class="login-button btn btn-info">Iniciar Sesión</button>
+      </div>
+    </form>
+
+
+
+
+
+    <a href="../registro/">Registrarse</a>
+  </div>
+</nav>

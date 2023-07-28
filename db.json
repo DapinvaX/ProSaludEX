@@ -1,0 +1,356 @@
+{
+  "medicos": [
+    {
+      "id": 1,
+      "num_colegiado": "123456789",
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "apellido2": "López",
+      "especialidad": "Traumatología",
+      "usuario": "juan",
+      "contrasena": "juan1234"
+
+    },
+    {
+      "id": 2,
+      "num_colegiado": "123456799",
+      "nombre": "María",
+      "apellido": "García",
+      "apellido2": "López",
+      "especialidad": "Medicina General",
+      "usuario": "maria",
+      "contrasena": "maria1234"
+    },
+    {
+
+      "id": 3,
+      "num_colegiado": "143456799",
+      "nombre": "Antonio",
+      "apellido": "Ramirez",
+      "apellido2": "Castro",
+      "especialidad": "Neurología",
+      "usuario": "antonio",
+      "contrasena": "antonio1234"
+    },
+    {
+
+      "id": 4,
+      "num_colegiado": "123556799",
+      "nombre": "María",
+      "apellido": "García",
+      "apellido2": "López",
+      "especialidad": "Neumología",
+      "usuario": "maria",
+      "contrasena": "maria1234"
+
+    }
+  ],
+
+  "pacientes": [
+
+    {
+      "id": 1,
+      "num_SS": "123456789",
+      "nombre": "Juan",
+      "apellido1": "Pérez",
+      "apellido2": "Gómez",
+      "fecha_nacimiento": "1985-05-10",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Ibuprofeno"
+    },
+    {
+      "id": 2,
+      "num_SS": "987654321",
+      "nombre": "María",
+      "apellido1": "González",
+      "apellido2": "López",
+      "fecha_nacimiento": "1992-09-15",
+      "motivo": "Gripe",
+      "tratamiento": "Descanso y líquidos"
+    },
+    {
+      "id": 3,
+      "num_SS": "456789123",
+      "nombre": "Pedro",
+      "apellido1": "Martínez",
+      "apellido2": "Hernández",
+      "fecha_nacimiento": "1978-12-03",
+      "motivo": "Fiebre",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 4,
+      "num_SS": "321654987",
+      "nombre": "Ana",
+      "apellido1": "López",
+      "apellido2": "Sánchez",
+      "fecha_nacimiento": "2000-06-20",
+      "motivo": "Dolor de garganta",
+      "tratamiento": "Gárgaras con agua salada"
+    },
+    {
+      "id": 5,
+      "num_SS": "654321987",
+      "nombre": "Javier",
+      "apellido1": "Fernández",
+      "apellido2": "Mendoza",
+      "fecha_nacimiento": "1989-02-28",
+      "motivo": "Herida en la pierna",
+      "tratamiento": "Vendaje y desinfectante"
+    },
+    {
+      "id": 6,
+      "num_SS": "789654321",
+      "nombre": "Laura",
+      "apellido1": "Ramírez",
+      "apellido2": "Vargas",
+      "fecha_nacimiento": "1995-07-12",
+      "motivo": "Dolor de cabeza",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 7,
+      "num_SS": "147852369",
+      "nombre": "Carlos",
+      "apellido1": "García",
+      "apellido2": "Romero",
+      "fecha_nacimiento": "1983-11-17",
+      "motivo": "Dolor de estómago",
+      "tratamiento": "Omeprazol"
+    },
+    {
+      "id": 8,
+      "num_SS": "963852741",
+      "nombre": "Sara",
+      "apellido1": "Hernández",
+      "apellido2": "López",
+      "fecha_nacimiento": "1976-08-05",
+      "motivo": "Resfriado",
+      "tratamiento": "Descanso y líquidos"
+    },
+    {
+      "id": 9,
+      "num_SS": "258741369",
+      "nombre": "Miguel",
+      "apellido1": "Silva",
+      "apellido2": "Gómez",
+      "fecha_nacimiento": "1998-04-23",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Masajes y estiramientos"
+    },
+    {
+      "id": 10,
+      "num_SS": "369258147",
+      "nombre": "Isabel",
+      "apellido1": "López",
+      "apellido2": "Martín",
+      "fecha_nacimiento": "1991-03-16",
+      "motivo": "Mareos",
+      "tratamiento": "Reposo y medicación para el mareo"
+    },
+    {
+      "id": 11,
+      "num_SS": "654789123",
+      "nombre": "Antonio",
+      "apellido1": "García",
+      "apellido2": "Muñoz",
+      "fecha_nacimiento": "1982-10-25",
+      "motivo": "Golpe en la cabeza",
+      "tratamiento": "Observación y analgésicos"
+    },
+    {
+      "id": 12,
+      "num_SS": "321987654",
+      "nombre": "Luisa",
+      "apellido1": "Torres",
+      "apellido2": "Sánchez",
+      "fecha_nacimiento": "1997-06-08",
+      "motivo": "Dolor de garganta",
+      "tratamiento": "Gárgaras con agua salada"
+    },
+    {
+      "id": 13,
+      "num_SS": "789123456",
+      "nombre": "Daniel",
+      "apellido1": "Hernández",
+      "apellido2": "Romero",
+      "fecha_nacimiento": "1979-12-19",
+      "motivo": "Fiebre",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 14,
+      "num_SS": "456321789",
+      "nombre": "Carmen",
+      "apellido1": "López",
+      "apellido2": "García",
+      "fecha_nacimiento": "2001-07-02",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Ibuprofeno y reposo"
+    },
+    {
+      "id": 15,
+      "num_SS": "963147852",
+      "nombre": "Jorge",
+      "apellido1": "Fernández",
+      "apellido2": "Vargas",
+      "fecha_nacimiento": "1988-03-30",
+      "motivo": "Dolor de cabeza",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 16,
+      "num_SS": "258369147",
+      "nombre": "Marina",
+      "apellido1": "García",
+      "apellido2": "Hernández",
+      "fecha_nacimiento": "1994-09-13",
+      "motivo": "Dolor de estómago",
+      "tratamiento": "Omeprazol"
+    },
+    {
+      "id": 17,
+      "num_SS": "147963258",
+      "nombre": "Pablo",
+      "apellido1": "Hernández",
+      "apellido2": "López",
+      "fecha_nacimiento": "1977-05-07",
+      "motivo": "Resfriado",
+      "tratamiento": "Descanso y líquidos"
+    },
+    {
+      "id": 18,
+      "num_SS": "654147963",
+      "nombre": "Elena",
+      "apellido1": "Gómez",
+      "apellido2": "Silva",
+      "fecha_nacimiento": "1993-01-12",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Masajes y estiramientos"
+    },
+    {
+      "id": 19,
+      "num_SS": "369741258",
+      "nombre": "Roberto",
+      "apellido1": "López",
+      "apellido2": "Martínez",
+      "fecha_nacimiento": "1980-08-24",
+      "motivo": "Mareos",
+      "tratamiento": "Reposo y medicación para el mareo"
+    },
+    {
+      "id": 20,
+      "num_SS": "741963852",
+      "nombre": "Lucía",
+      "apellido1": "García",
+      "apellido2": "Muñoz",
+      "fecha_nacimiento": "1996-04-06",
+      "motivo": "Golpe en la cabeza",
+      "tratamiento": "Observación y analgésicos"
+    },
+    {
+      "id": 21,
+      "num_SS": "852369741",
+      "nombre": "Marcos",
+      "apellido1": "Torres",
+      "apellido2": "Sánchez",
+      "fecha_nacimiento": "1987-11-28",
+      "motivo": "Dolor de garganta",
+      "tratamiento": "Gárgaras con agua salada"
+    },
+    {
+      "id": 22,
+      "num_SS": "963852741",
+      "nombre": "Laura",
+      "apellido1": "Hernández",
+      "apellido2": "Romero",
+      "fecha_nacimiento": "1984-07-15",
+      "motivo": "Fiebre",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 23,
+      "num_SS": "123456789",
+      "nombre": "Diego",
+      "apellido1": "López",
+      "apellido2": "García",
+      "fecha_nacimiento": "2002-02-18",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Ibuprofeno y reposo"
+    },
+    {
+      "id": 24,
+      "num_SS": "987654321",
+      "nombre": "Ana",
+      "apellido1": "Fernández",
+      "apellido2": "Vargas",
+      "fecha_nacimiento": "1981-10-03",
+      "motivo": "Dolor de cabeza",
+      "tratamiento": "Paracetamol"
+    },
+    {
+      "id": 25,
+      "num_SS": "456789123",
+      "nombre": "Roberto",
+      "apellido1": "García",
+      "apellido2": "Hernández",
+      "fecha_nacimiento": "1990-04-25",
+      "motivo": "Dolor de estómago",
+      "tratamiento": "Omeprazol"
+    },
+    {
+      "id": 26,
+      "num_SS": "321654987",
+      "nombre": "Sara",
+      "apellido1": "Hernández",
+      "apellido2": "López",
+      "fecha_nacimiento": "1975-12-08",
+      "motivo": "Resfriado",
+      "tratamiento": "Descanso y líquidos"
+    },
+    {
+      "id": 27,
+      "num_SS": "654321987",
+      "nombre": "Andrés",
+      "apellido1": "Silva",
+      "apellido2": "Gómez",
+      "fecha_nacimiento": "1999-07-21",
+      "motivo": "Dolor de espalda",
+      "tratamiento": "Masajes y estiramientos"
+    },
+    {
+      "id": 28,
+      "num_SS": "789654321",
+      "nombre": "Carla",
+      "apellido1": "López",
+      "apellido2": "Martín",
+      "fecha_nacimiento": "1992-03-14",
+      "motivo": "Mareos",
+      "tratamiento": "Reposo y medicación para el mareo"
+    },
+    {
+      "id": 29,
+      "num_SS": "147852369",
+      "nombre": "Manuel",
+      "apellido1": "García",
+      "apellido2": "Muñoz",
+      "fecha_nacimiento": "1986-09-26",
+      "motivo": "Golpe en la cabeza",
+      "tratamiento": "Observación y analgésicos"
+    },
+    {
+      "id": 30,
+      "num_SS": "963741852",
+      "nombre": "Laura",
+      "apellido1": "Torres",
+      "apellido2": "Sánchez",
+      "fecha_nacimiento": "1998-05-11",
+      "motivo": "Dolor de garganta",
+      "tratamiento": "Gárgaras con agua salada"
+    }
+
+
+
+  ]
+
+}

@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto,
+  "Helvetica Neue",
+  sans-serif;
+  width: 100%;
+  background-image: url(https://image.freepik.com/foto-gratis/fondo-abstracto-degradado-azul-turquesa_8087-3920.jpg);
+  background-position: right bottom;	background-size: cover;	background-repeat: repeat; background-attachment: fixed;
+
+}
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+ 
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
