@@ -10,6 +10,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
+
 const routes: Routes = [
 
   { path: 'sobre-nosotros', component: SobreNosotrosComponent },

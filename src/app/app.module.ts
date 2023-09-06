@@ -13,6 +13,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MedicoComponent } from './usuarios/medico/medico.component';
+import { PacienteComponent } from './usuarios/paciente/paciente.component';
+import { LoginComponent } from './login/login.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
@@ -32,9 +36,8 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UsuariosComponent } from './usuarios/usuarios.component';
-import { MedicoComponent } from './usuarios/medico/medico.component';
-import { PacienteComponent } from './usuarios/paciente/paciente.component';
+
+
 
 
 @NgModule({
@@ -50,7 +53,8 @@ import { PacienteComponent } from './usuarios/paciente/paciente.component';
     FooterComponent,
     UsuariosComponent,
     MedicoComponent,
-    PacienteComponent
+    PacienteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +77,8 @@ import { PacienteComponent } from './usuarios/paciente/paciente.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

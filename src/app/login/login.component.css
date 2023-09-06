@@ -1,0 +1,41 @@
+/* /* .login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+*/
+.login-button {
+  margin-left: auto;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-bottom: 6px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.email {
+  margin-left: auto;
+  border-radius: 10px;
+
+}
+
+.password {
+  margin-left: 1px;
+  border-radius: 10px;
+}
+
+#linkReg{
+  margin-left: 4px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+/* Path: src/app/login/login.component.html */

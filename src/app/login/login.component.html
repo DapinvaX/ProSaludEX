@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+  <div class="input-container">
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput class="form-control email" formControlName="email" type="email">
+      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">El correo electrónico es requerido</mat-error>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">El correo electrónico no es válido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Contraseña</mat-label>
+      <input matInput class="form-control password" formControlName="password" type="password">
+      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">La contraseña es requerida</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid" class="login-button btn btn-info">Iniciar Sesión</button>
+  </div>
+</form>
+
+<a id="linkReg" href="../registro/">Registrarse</a>

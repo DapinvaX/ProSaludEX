@@ -61,7 +61,7 @@
  <nav class="navbar">
   <div class="navbar-left">
     <a routerLink="../inicio" class="navbar-brand text-info text-decoration-none" style="font-family: 'Roboto', sans-serif;">
-      <img src="../images/ritmo-cardiacoSinFondo.png" alt="">
+      <!-- <img src="../images/ritmo-cardiacoSinFondo.png" alt=""> -->
       <b>ProSaludEX</b>
     </a>
   </div>
@@ -74,32 +74,7 @@
   </div>
   <div class="navbar-right">
 
+    <app-login></app-login>
 
-
-
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-      <div class="input-container">
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>Correo Electrónico</mat-label>
-          <input matInput formControlName="email" type="email">
-          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">El correo electrónico es requerido</mat-error>
-          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">El correo electrónico no es válido</mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline" class="input-field">
-          <mat-label>Contraseña</mat-label>
-          <input matInput formControlName="password" type="password">
-          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">La contraseña es requerida</mat-error>
-        </mat-form-field>
-
-        <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid" class="login-button btn btn-info">Iniciar Sesión</button>
-      </div>
-    </form>
-
-
-
-
-
-    <a href="../registro/">Registrarse</a>
   </div>
 </nav>
