@@ -1,1 +1,58 @@
-<p>medico works!</p>
+<!-- FILEPATH: /c:/xampp/htdocs/ProSaludEX/src/app/usuarios/medico/medico.component.html -->
+
+<!-- Formulario de filtrado en línea -->
+<div>
+  <label for="num_ss">Número de Seguridad Social:</label>
+  <input type="text" id="num_ss" name="num_ss">
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre">
+
+  <label for="apellido1">Primer Apellido:</label>
+  <input type="text" id="apellido1" name="apellido1">
+
+  <label for="apellido2">Segundo Apellido:</label>
+  <input type="text" id="apellido2" name="apellido2">
+
+  <label for="fecha_cita">Fecha de la Cita:</label>
+  <input type="date" id="fecha_cita" name="fecha_cita">
+
+  <label for="hora_cita">Hora de la Cita:</label>
+  <input type="time" id="hora_cita" name="hora_cita">
+
+  <button type="submit">Buscar</button>
+  <button type="reset">Limpiar</button>
+</div>
+
+<!-- Tabla de citas -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Número de la seguridad social</th>
+      <th>Nombre</th>
+      <th>Apellido 1</th>
+      <th>Apellido 2</th>
+      <th>Fecha de la cita</th>
+      <th>Hora de la cita</th>
+      <th>Motivo</th>
+      <th>Tratamiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--  <tr *ngFor="let cita of citas | filtroPacientes:num_ss:nombre:apellido1:apellido2:fecha_cita:hora_cita"> -->
+    <tr *ngFor="let cita of citas">
+      <td>{{ cita.id }}</td>
+      <td>{{ cita.num_ss }}</td>
+      <td>{{ cita.nombre }}</td>
+      <td>{{ cita.apellido1 }}</td>
+      <td>{{ cita.apellido2 }}</td>
+      <td>{{ cita.fecha_cita }}</td>
+      <td>{{ cita.hora_cita }}</td>
+      <td>{{ cita.motivo }}</td>
+      <td>{{ cita.tratamiento }}</td>
+      <td><button (click)="editarCita(cita)">Editar</button></td>
+      <td><button (click)="eliminarCita(cita)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>

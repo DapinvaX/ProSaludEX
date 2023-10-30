@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class UsuariosComponent{
 
-  tipoUsuario: string;
+  /* tipoUsuario: string; */
 
 
 
   constructor() {
 
-    this.tipoUsuario = "medico";
+   /*  this.tipoUsuario = "medico";
     this.tipoUsuario = "paciente";
-
+ */
    }
 
 }

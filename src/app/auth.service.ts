@@ -7,7 +7,7 @@ export class AuthService {
   private loggedIn = false;
 
   login(email: string, password: string): boolean {
-    // Simula la autenticación en el frontend. Aquí puedes agregar lógica de validación.
+    // Simula la autenticación en el frontend. En un entorno real, llamaría a un servicio externo.
     if (email === 'usuario@example.com' && password === 'contraseña') {
       this.loggedIn = true;
       return true;
@@ -24,4 +24,6 @@ export class AuthService {
   logout(): void {
     this.loggedIn = false;
   }
+
+
 }

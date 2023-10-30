@@ -14,8 +14,6 @@ import { CarruselComponent } from './carrusel/carrusel.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { MedicoComponent } from './usuarios/medico/medico.component';
-import { PacienteComponent } from './usuarios/paciente/paciente.component';
 import { LoginComponent } from './login/login.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -36,6 +34,8 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FiltroPipe } from './filtro.pipe';
+
 
 
 
@@ -52,9 +52,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     InicioComponent,
     FooterComponent,
     UsuariosComponent,
-    MedicoComponent,
-    PacienteComponent,
-    LoginComponent
+    LoginComponent,
+    FiltroPipe,
+
   ],
   imports: [
     BrowserModule,

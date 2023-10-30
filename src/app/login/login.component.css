@@ -38,4 +38,10 @@
   margin-bottom: 6px;
 }
 
+#linkRec{
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
 /* Path: src/app/login/login.component.html */
