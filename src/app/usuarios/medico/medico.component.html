@@ -1,47 +1,91 @@
 <!-- FILEPATH: /c:/xampp/htdocs/ProSaludEX/src/app/usuarios/medico/medico.component.html -->
 
 <!-- Formulario de filtrado en línea -->
-<div>
-  <label for="num_ss">Número de Seguridad Social:</label>
-  <input type="text" id="num_ss" name="num_ss">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="num_ss" class="form-label">Número de Seguridad Social:</label>
+      <input type="text" class="form-control" id="num_ss" name="num_ss">
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" name="nombre">
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="apellido1" class="form-label">Primer Apellido:</label>
+      <input type="text" class="form-control" id="apellido1" name="apellido1">
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="apellido2" class="form-label">Segundo Apellido:</label>
+      <input type="text" class="form-control" id="apellido2" name="apellido2">
+    </div>
+  </div>
 
-  <label for="nombre">Nombre:</label>
-  <input type="text" id="nombre" name="nombre">
-
-  <label for="apellido1">Primer Apellido:</label>
-  <input type="text" id="apellido1" name="apellido1">
-
-  <label for="apellido2">Segundo Apellido:</label>
-  <input type="text" id="apellido2" name="apellido2">
-
-  <label for="fecha_cita">Fecha de la Cita:</label>
-  <input type="date" id="fecha_cita" name="fecha_cita">
-
-  <label for="hora_cita">Hora de la Cita:</label>
-  <input type="time" id="hora_cita" name="hora_cita">
-
-  <button type="submit">Buscar</button>
-  <button type="reset">Limpiar</button>
+  <div class="row">
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="hora_cita" class="form-label">Hora de la Cita:</label>
+      <input type="time" class="form-control" id="hora_cita" name="hora_cita">
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="fecha_cita" class="form-label">Fecha de la Cita:</label>
+      <input type="date" class="form-control" id="fecha_cita" name="fecha_cita">
+    </div>
+     <div class="col-md-6 col-lg-3 mb-3 divBotones">
+      <button type="button" class="btn btn-info" onclick="filtrar()">Filtrar</button>
+      <button type="button" class="btn btn-info" onclick="limpiarCampos()">Limpiar</button>
+  </div>
 </div>
 
+  <script>
+
+    function limpiarCampos() {
+        document.getElementById("num_ss").value = "";
+        document.getElementById("nombre").value = "";
+        document.getElementById("apellido1").value = "";
+        document.getElementById("apellido2").value = "";
+        document.getElementById("fecha_cita").value = "";
+        document.getElementById("hora_cita").value = "";
+      }
+
+      function filtrar() {
+
+        var num_ss = document.getElementById("num_ss").value;
+        var nombre = document.getElementById("nombre").value;
+        var apellido1 = document.getElementById("apellido1").value;
+        var apellido2 = document.getElementById("apellido2").value;
+        var fecha_cita = document.getElementById("fecha_cita").value;
+        var hora_cita = document.getElementById("hora_cita").value;
+        alert(num_ss);
+        alert(nombre);
+        alert(apellido1);
+        alert(apellido2);
+        alert(fecha_cita);
+        alert(hora_cita);
+        window.location.href = "http://localhost:4200/usuarios/medico/medico.component.html";
+        //window.location.href = "http://localhost:4200/usuarios/medico/medico.component.html?num_ss=" + num_ss + "&nombre=" + nombre + "&apellido1=" + apellido1 + "&apellido2=" + apellido2 + "&fecha_cita=" + fecha_cita + "&hora_cita=" + hora_cita;
+
+      }
+
+  </script>
+
+
 <!-- Tabla de citas -->
-<table>
+<table style="margin: 0 auto; width: 80%; text-align: center;">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Número de la seguridad social</th>
-      <th>Nombre</th>
-      <th>Apellido 1</th>
-      <th>Apellido 2</th>
-      <th>Fecha de la cita</th>
-      <th>Hora de la cita</th>
-      <th>Motivo</th>
-      <th>Tratamiento</th>
+      <th>NÚMERO DE LA SEGURIDAD SOCIAL</th>
+      <th>NOMBRE</th>
+      <th>PRIMER APELLIDO</th>
+      <th>SEGUNDO APELLIDO</th>
+      <th>FECHA DE LA CITA</th>
+      <th>HORA DE LA CITA</th>
+      <th>MOTIVO</th>
+      <th>TRATAMIENTO</th>
     </tr>
   </thead>
   <tbody>
-    <!--  <tr *ngFor="let cita of citas | filtroPacientes:num_ss:nombre:apellido1:apellido2:fecha_cita:hora_cita"> -->
-    <tr *ngFor="let cita of citas">
+    <tr *ngFor="let cita of citas" class="resaltado">
       <td>{{ cita.id }}</td>
       <td>{{ cita.num_ss }}</td>
       <td>{{ cita.nombre }}</td>

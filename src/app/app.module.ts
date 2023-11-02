@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { ServiciosComponent } from './servicios/servicios.component';
@@ -13,11 +16,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 import { LoginComponent } from './login/login.component';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -33,8 +39,11 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FiltroPipe } from './filtro.pipe';
+
+
+import { FiltroCitasPacientePipe } from './usuarios/paciente/filtro-citas-paciente.pipe';
+import { FiltroPacientesPipe } from './usuarios/medico/filtro-pacientes.pipe';
+
 
 
 
@@ -51,17 +60,23 @@ import { FiltroPipe } from './filtro.pipe';
     CarruselComponent,
     InicioComponent,
     FooterComponent,
-    UsuariosComponent,
     LoginComponent,
-    FiltroPipe,
+    FiltroCitasPacientePipe,
+    FiltroPacientesPipe
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
     MatFormFieldModule,
     MatIconModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatSelectModule,
+
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,

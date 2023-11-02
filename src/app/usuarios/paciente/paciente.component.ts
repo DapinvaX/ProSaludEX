@@ -10,31 +10,16 @@ export class PacienteComponent implements OnInit {
 
   citasPaciente: FiltroCitasPacientePipe[] = [];
 
+  displayedColumns: string[] = ['id', 'nombre', 'apellidos', 'email', 'telefono', 'fechaNacimiento', 'direccion', 'ciudad', 'codigoPostal', 'pais', 'dni', 'acciones'];
+
+
   constructor() { }
 
+
   ngOnInit(): void {
-  }
-
-  nombre : string = '';
-  apellido1 : string = '';
-  apellido2 : string = '';
-  fecha_cita: String = '';
-  hora_cita: String = '';
-  motivo: String = '';
-  tratamiento: String = '';
-
-  columnaOrdenada: string = '';
-  ordenarPor(columna: string) {
-    // Lógica para ordenar la tabla por la columna seleccionada
-    this.columnaOrdenada = columna;
-  }
 
 
-  //Rellenar tabla pacientes con los datos del paciente logueado
-  rellenarTablaPacientes(paciente: any) {
-    this.nombre = paciente.nombre;
-    this.apellido1 = paciente.apellido1;
-    this.apellido2 = paciente.apellido2;
+
   }
 
 }

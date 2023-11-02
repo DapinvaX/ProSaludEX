@@ -1,9 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { MedicoComponent } from './medico/medico.component';
 import { PacienteComponent } from './paciente/paciente.component';
-import { FiltroPacientesPipe } from './medico/filtro-pacientes.pipe';
-import { FiltroCitasPacientePipe } from './paciente/filtro-citas-paciente.pipe';
+
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
+
+
+
 
 
 
@@ -12,12 +21,18 @@ import { FiltroCitasPacientePipe } from './paciente/filtro-citas-paciente.pipe';
 
     MedicoComponent,
     PacienteComponent,
-    FiltroPacientesPipe,
-    FiltroCitasPacientePipe
+
 
   ],
   imports: [
     CommonModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule
+
+
+
   ]
 })
 export class UsuariosModule { }

@@ -4,9 +4,5 @@
 			"path": "."
 		}
 	],
-	"settings": {
-		"editor.tabCompletion": "on",
-		"diffEditor.codeLens": true,
-		"npm-scripts.showStartNotification": false
-	}
+	"settings": {}
 }

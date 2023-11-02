@@ -1,51 +1,122 @@
 <!-- FILEPATH: /c:/xampp/htdocs/ProSaludEX/src/app/usuarios/paciente/paciente.component.html -->
 
 <!-- Tabla de citas del paciente logueado -->
-<table>
+
+<!-- <mat-table [dataSource]="citasPaciente">
+  <ng-container matColumnDef="nombre">
+    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+    <mat-cell *matCellDef="let cita"> {{cita.nombre}} {{cita.apellido1}} {{cita.apellido2}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="fecha_cita">
+    <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
+    <mat-cell *matCellDef="let cita"> {{cita.fecha_cita}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="hora_cita">
+    <mat-header-cell *matHeaderCellDef> Hora </mat-header-cell>
+    <mat-cell *matCellDef="let cita"> {{cita.hora_cita}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="motivo">
+    <mat-header-cell *matHeaderCellDef> Motivo </mat-header-cell>
+    <mat-cell *matCellDef="let cita"> {{cita.motivo}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="tratamiento">
+    <mat-header-cell *matHeaderCellDef> Tratamiento </mat-header-cell>
+    <mat-cell *matCellDef="let cita"> {{cita.tratamiento}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table> -->
+
+<!-- Formulario para pedir cita -->
+
+<!-- <form>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Fecha disponible" id="fecha" name="fecha" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Hora disponible</mat-label>
+    <mat-select id="hora" name="hora" required>
+      <mat-option value="">Seleccione una hora</mat-option>
+      <mat-option value="09:00">09:00</mat-option>
+      <mat-option value="09:30">09:30</mat-option>
+      <mat-option value="10:00">10:00</mat-option>
+      <mat-option value="10:30">10:30</mat-option>
+      <mat-option value="11:00">11:00</mat-option>
+      <mat-option value="11:30">11:30</mat-option>
+      <mat-option value="12:00">12:00</mat-option>
+      <mat-option value="12:30">12:30</mat-option>
+      <mat-option value="13:00">13:00</mat-option>
+      <mat-option value="13:30">13:30</mat-option>
+      <mat-option value="14:00">14:00</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Pedir cita</button>
+</form>
+ -->
+
+ <form>
+  <div class="mb-3">
+    <label for="fecha" class="form-label">Fecha disponible</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="fecha" name="fecha" placeholder="Fecha disponible" required>
+      <button class="btn btn-outline-secondary" type="button" id="fechaPicker">Seleccionar Fecha</button>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="hora" class="form-label">Hora disponible</label>
+    <select class="form-select" id="hora" name="hora" required>
+      <option value="">Seleccione una hora</option>
+      <option value="09:00">09:00</option>
+      <option value="09:30">09:30</option>
+      <option value="10:00">10:00</option>
+      <option value="10:30">10:30</option>
+      <option value="11:00">11:00</option>
+      <option value="11:30">11:30</option>
+      <option value="12:00">12:00</option>
+      <option value="12:30">12:30</option>
+      <option value="13:00">13:00</option>
+      <option value="13:30">13:30</option>
+      <option value="14:00">14:00</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-info">Pedir cita</button>
+</form>
+
+
+ <table class="tablaPaciente">
   <thead>
     <tr>
+      <th>Nombre</th>
       <th>Fecha</th>
       <th>Hora</th>
-      <th>Doctor</th>
       <th>Motivo</th>
       <th>Tratamiento</th>
     </tr>
   </thead>
   <tbody>
-    <!-- Aquí se mostrarán las citas del paciente logueado -->
-    <!-- <tr *ngFor="let cita of citasPaciente | filtroCitasPaciente:num_ss:nombre:apellido1:apellido2:fecha_cita:hora_cita"> -->
-    <tr *ngFor="let cita of citasPaciente">
-      <td>{{ cita.nombre }} {{ cita.apellido1 }} {{ cita.apellido2 }}</td>
-      <td>{{ cita.fecha_cita }}</td>
-      <td>{{ cita.hora_cita }}</td>
-      <td>{{ cita.motivo }}</td>
-      <td>{{ cita.tratamiento }}</td>
-    </tr>
+    <ng-container *ngFor="let cita of citasPaciente">
+      <tr>
+        <td>{{cita.nombre}} {{cita.apellido1}} {{cita.apellido2}}</td>
+        <td>{{cita.fecha_cita}}</td>
+        <td>{{cita.hora_cita}}</td>
+        <td>{{cita.motivo}}</td>
+        <td>{{cita.tratamiento}}</td>
+      </tr>
+    </ng-container>
   </tbody>
 </table>
 
-<!-- Formulario para pedir cita -->
-<form>
-  <label for="fecha">Fecha disponible:</label>
-  <input type="date" id="fecha" name="fecha" required>
 
-  <label for="hora">Hora disponible:</label>
-  <select id="hora" name="hora" required>
-    <option value="">Seleccione una hora</option>
-    <option value="09:00">09:00</option>
-    <option value="09:30">09:30</option>
-    <option value="10:00">10:00</option>
-    <option value="10:30">10:30</option>
-    <option value="11:00">11:00</option>
-    <option value="11:30">11:30</option>
-    <option value="12:00">12:00</option>
-    <option value="12:30">12:30</option>
-    <option value="13:00">13:00</option>
-    <option value="13:30">13:30</option>
-    <option value="14:00">14:00</option>
-  </select>
-
-  <button type="submit">Pedir cita</button>
-</form>
 
 
