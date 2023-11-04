@@ -1,40 +1,86 @@
 <!-- FILEPATH: /c:/xampp/htdocs/ProSaludEX/src/app/usuarios/paciente/paciente.component.html -->
 
-<!-- Tabla de citas del paciente logueado -->
+<div class="container">
 
-<!-- <mat-table [dataSource]="citasPaciente">
-  <ng-container matColumnDef="nombre">
-    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
-    <mat-cell *matCellDef="let cita"> {{cita.nombre}} {{cita.apellido1}} {{cita.apellido2}} </mat-cell>
-  </ng-container>
+  <div class="row">
 
-  <ng-container matColumnDef="fecha_cita">
-    <mat-header-cell *matHeaderCellDef> Fecha </mat-header-cell>
-    <mat-cell *matCellDef="let cita"> {{cita.fecha_cita}} </mat-cell>
-  </ng-container>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="hora_cita" class="form-label">Hora de la Cita:</label>
+      <input type="time" class="form-control" id="hora_cita" name="hora_cita">
+    </div>
+    <div class="col-md-6 col-lg-3 mb-3">
+      <label for="fecha_cita" class="form-label">Fecha de la Cita:</label>
+      <input type="date" class="form-control" id="fecha_cita" name="fecha_cita">
+    </div>
+     <div class="col-md-6 col-lg-3 mb-3 divBotones">
+      <button type="button" class="btn btn-info" (click)="filtrar()">Filtrar</button>
+      <button type="button" class="btn btn-info" (click)="limpiarCampos()">Limpiar</button>
+      <button type="button" class="btn btn-info" (click)="pedirCita()">Pedir Cita</button>
+    </div>
 
-  <ng-container matColumnDef="hora_cita">
-    <mat-header-cell *matHeaderCellDef> Hora </mat-header-cell>
-    <mat-cell *matCellDef="let cita"> {{cita.hora_cita}} </mat-cell>
-  </ng-container>
 
-  <ng-container matColumnDef="motivo">
-    <mat-header-cell *matHeaderCellDef> Motivo </mat-header-cell>
-    <mat-cell *matCellDef="let cita"> {{cita.motivo}} </mat-cell>
-  </ng-container>
+</div>
 
-  <ng-container matColumnDef="tratamiento">
-    <mat-header-cell *matHeaderCellDef> Tratamiento </mat-header-cell>
-    <mat-cell *matCellDef="let cita"> {{cita.tratamiento}} </mat-cell>
-  </ng-container>
+  <script>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table> -->
 
-<!-- Formulario para pedir cita -->
 
-<!-- <form>
+      function filtrar() {
+
+        var num_ss = document.getElementById("num_ss").value;
+        var nombre = document.getElementById("nombre").value;
+        var apellido1 = document.getElementById("apellido1").value;
+        var apellido2 = document.getElementById("apellido2").value;
+        var fecha_cita = document.getElementById("fecha_cita").value;
+        var hora_cita = document.getElementById("hora_cita").value;
+        alert(num_ss);
+        alert(nombre);
+        alert(apellido1);
+        alert(apellido2);
+        alert(fecha_cita);
+        alert(hora_cita);
+        //window.location.href = "http://localhost:4200/usuarios/medico/medico.component.html";
+        window.location.href = "http://localhost:4200/usuarios/medico/medico.component.html?num_ss=" + num_ss + "&nombre=" + nombre + "&apellido1=" + apellido1 + "&apellido2=" + apellido2 + "&fecha_cita=" + fecha_cita + "&hora_cita=" + hora_cita;
+
+      }
+
+  </script>
+
+  <div class="row">
+
+    <div class="col-md-12 col-lg-12 mb-12">
+
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Número de Seguridad Social</th>
+            <th scope="col">Fecha de la Cita</th>
+            <th scope="col">Hora de la Cita</th>
+            <th scope="col">Motivo</th>
+            <th scope="col">Tratamiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cita of citas" class="resaltado">
+            <td>{{ cita.id }}</td>
+            <td>{{ cita.fecha_cita }}</td>
+            <td>{{ cita.hora_cita }}</td>
+            <td>{{ cita.motivo }}</td>
+            <td>{{ cita.tratamiento }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--
+<form>
   <mat-form-field>
     <input matInput [matDatepicker]="picker" placeholder="Fecha disponible" id="fecha" name="fecha" required>
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -61,62 +107,37 @@
 
   <button mat-raised-button type="submit">Pedir cita</button>
 </form>
- -->
 
- <form>
-  <div class="mb-3">
-    <label for="fecha" class="form-label">Fecha disponible</label>
-    <div class="input-group">
-      <input type="text" class="form-control" id="fecha" name="fecha" placeholder="Fecha disponible" required>
-      <button class="btn btn-outline-secondary" type="button" id="fechaPicker">Seleccionar Fecha</button>
-    </div>
-  </div>
+<table mat-table class="tablaPaciente" [dataSource]="citasPaciente">
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let cita"> {{cita.nombre}} {{cita.apellido1}} {{cita.apellido2}} </td>
+  </ng-container>
+-->
+<!--
+  <ng-container matColumnDef="fecha_cita">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let cita"> {{cita.fecha_cita}} </td>
+  </ng-container>
 
-  <div class="mb-3">
-    <label for="hora" class="form-label">Hora disponible</label>
-    <select class="form-select" id="hora" name="hora" required>
-      <option value="">Seleccione una hora</option>
-      <option value="09:00">09:00</option>
-      <option value="09:30">09:30</option>
-      <option value="10:00">10:00</option>
-      <option value="10:30">10:30</option>
-      <option value="11:00">11:00</option>
-      <option value="11:30">11:30</option>
-      <option value="12:00">12:00</option>
-      <option value="12:30">12:30</option>
-      <option value="13:00">13:00</option>
-      <option value="13:30">13:30</option>
-      <option value="14:00">14:00</option>
-    </select>
-  </div>
+  <ng-container matColumnDef="hora_cita">
+    <th mat-header-cell *matHeaderCellDef> Hora </th>
+    <td mat-cell *matCellDef="let cita"> {{cita.hora_cita}} </td>
+  </ng-container>
 
-  <button type="submit" class="btn btn-info">Pedir cita</button>
-</form>
+  <ng-container matColumnDef="motivo">
+    <th mat-header-cell *matHeaderCellDef> Motivo </th>
+    <td mat-cell *matCellDef="let cita"> {{cita.motivo}} </td>
+  </ng-container>
 
+  <ng-container matColumnDef="tratamiento">
+    <th mat-header-cell *matHeaderCellDef> Tratamiento </th>
+    <td mat-cell *matCellDef="let cita"> {{cita.tratamiento}} </td>
+  </ng-container>
 
- <table class="tablaPaciente">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Fecha</th>
-      <th>Hora</th>
-      <th>Motivo</th>
-      <th>Tratamiento</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngFor="let cita of citasPaciente">
-      <tr>
-        <td>{{cita.nombre}} {{cita.apellido1}} {{cita.apellido2}}</td>
-        <td>{{cita.fecha_cita}}</td>
-        <td>{{cita.hora_cita}}</td>
-        <td>{{cita.motivo}}</td>
-        <td>{{cita.tratamiento}}</td>
-      </tr>
-    </ng-container>
-  </tbody>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-
-
+-->
 

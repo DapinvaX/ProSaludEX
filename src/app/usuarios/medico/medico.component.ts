@@ -8,6 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicoComponent implements OnInit {
 
+
+filtrar(){
+
+}
+
+
+
+limpiarCampos() {
+
+
+  (<HTMLInputElement>document.getElementById("num_ss")).value = "";
+  (<HTMLInputElement>document.getElementById("nombre")).value = "";
+  (<HTMLInputElement>document.getElementById("apellido1")).value = "";
+  (<HTMLInputElement>document.getElementById("apellido2")).value = "";
+  (<HTMLInputElement>document.getElementById("fecha_cita")).value = "";
+  (<HTMLInputElement>document.getElementById("hora_cita")).value = "";
+
+
+  alert("Campos Limpiados");
+}
+
+//Array de la tabla
+displayedColumns: string[] = ['id', 'num_ss', 'nombre', 'apellido1', 'apellido2', 'fecha_cita', 'hora_cita', 'motivo', 'tratamiento', 'acciones'];
+
+
 editarCita( any: any) {
   throw new Error('Method not implemented.');
 
@@ -15,6 +40,9 @@ editarCita( any: any) {
 
 eliminarCita(any : any) {
   throw new Error('Method not implemented.');
+
+  
+
   }
 
   citas: any [] ;
@@ -105,7 +133,7 @@ eliminarCita(any : any) {
     });
   }
 
-  
+
 
   //Ordenar tabla
   columnaOrdenada: string = '';
