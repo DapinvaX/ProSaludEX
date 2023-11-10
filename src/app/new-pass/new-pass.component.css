@@ -1,0 +1,40 @@
+
+
+.parent{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.btnConfirmar{
+
+  margin-left: 5px;
+  width: 250px;
+
+}
+
+.btnAtras{
+
+  margin-left: 5px;
+
+}
+
+.divPrincipal{
+
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+input[type="password"]{
+
+  width: 300px;
+
+}

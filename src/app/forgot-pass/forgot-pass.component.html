@@ -1,0 +1,9 @@
+<form class="example-form" [formGroup]="forgotPassForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput class="form-control inpEmail" placeholder="Correo Electrónico" formControlName="email" >
+  </mat-form-field>
+  <div class="botones">
+    <button mat-raised-button class="form-control btn-info btn btnEnviar" type="submit">Enviar</button>
+    <button mat-raised-button class="form-control btn-info btn btnAtras" routerLink="inicio">Atrás</button>
+  </div>
+</form>

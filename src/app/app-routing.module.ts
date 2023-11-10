@@ -10,6 +10,8 @@ import { InicioComponent } from './inicio/inicio.component';
 /* import { UsuariosComponent } from './usuarios/usuarios.component'; */
 import { MedicoComponent } from './usuarios/medico/medico.component';
 import { PacienteComponent } from './usuarios/paciente/paciente.component';
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { NewPassComponent } from './new-pass/new-pass.component';
 
 
 
@@ -25,6 +27,10 @@ const routes: Routes = [
   //Provisional (para probar el componente). Eliminar después.
   { path: 'medico', component: MedicoComponent},
   { path: 'paciente', component: PacienteComponent},
+  { path: 'recuperar-contrasena', component: ForgotPassComponent},
+  { path: 'nueva-contrasena', component: NewPassComponent},
+  //{ path: 'recuperar-contrasena/:token', component: ForgotPassComponent},
+
 
   //Descomentar después de crear los componentes
   /* { path: 'medico/:id', component: MedicoComponent},

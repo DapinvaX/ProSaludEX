@@ -2,20 +2,49 @@
 
 <div class="container">
 
+
   <div class="row">
 
-    <div class="col-md-6 col-lg-3 mb-3">
-      <label for="hora_cita" class="form-label">Hora de la Cita:</label>
-      <input type="time" class="form-control" id="hora_cita" name="hora_cita">
+    <div class="col-md-1 col-lg-1 mb-1">
+     <!--  <label for="hora_cita" class="form-label">Hora de la Cita:</label>
+      <input type="time" class="form-control" id="hora_cita" name="hora_cita" data-list="minutos" min="09:00" max="14:00" > -->
+     <!--  <label for="hora_cita" class="form-label">Hora de la Cita:</label>
+      <mat-select formControlName="formHoras" placeholder="09:00">
+        <mat-option *ngFor="let hora of horas" [value]="hora">
+          {{ hora }}
+        </mat-option>
+      </mat-select> -->
+      <div class="form-group">
+        <label for="horas">Hora:</label>
+        <select class="form-control" name="horas" id="horas" style="width: fit-content;">
+          <!-- <option *ngFor="let hora of horas" value={{hora}}>{{hora}}</option> -->
+          <option value="09:00">09:00</option>
+          <option value="09:30">09:30</option>
+          <option value="10:00">10:00</option>
+          <option value="10:30">10:30</option>
+          <option value="11:00">11:00</option>
+          <option value="11:30">11:30</option>
+          <option value="12:00">12:00</option>
+          <option value="12:30">12:30</option>
+          <option value="13:00">13:00</option>
+          <option value="13:30">13:30</option>
+          <option value="14:00">14:00</option>
+          <option value="14:30">14:30</option>
+
+        </select>
+      </div>
+
     </div>
-    <div class="col-md-6 col-lg-3 mb-3">
+    <div class="col-md-4 col-lg-4 mb-4">
       <label for="fecha_cita" class="form-label">Fecha de la Cita:</label>
-      <input type="date" class="form-control" id="fecha_cita" name="fecha_cita">
+      <input type="date" class="form-control" id="fecha_cita" name="fecha_cita" value="01-01-2000">
+
+
     </div>
-     <div class="col-md-6 col-lg-3 mb-3 divBotones">
+     <div class="col-md-4 col-lg-4 mb-4 divBotones">
       <button type="button" class="btn btn-info" (click)="filtrar()">Filtrar</button>
-      <button type="button" class="btn btn-info" (click)="limpiarCampos()">Limpiar</button>
       <button type="button" class="btn btn-info" (click)="pedirCita()">Pedir Cita</button>
+      <button type="button" class="btn btn-info btnAtras" routerLink="inicio">Atrás</button>
     </div>
 
 

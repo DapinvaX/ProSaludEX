@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FiltroCitasPacientePipe } from './filtro-citas-paciente.pipe';
+import { Time } from '@angular/common';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { FiltroCitasPacientePipe } from './filtro-citas-paciente.pipe';
   templateUrl: './paciente.component.html',
   styleUrls: ['./paciente.component.css']
 })
-export class PacienteComponent implements OnInit {
+export class PacienteComponent{
 
   citasPaciente: FiltroCitasPacientePipe[] = [];
 
@@ -15,7 +16,21 @@ export class PacienteComponent implements OnInit {
 
   citas: any[] = [];
 
+
+  horas: Array<string> = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30','12:00','12:30','13:00','13:30','14:00','14:30'];
+
+  fecha = new Date();
+  hoy = this.fecha.getFullYear() + "-" + (this.fecha.getMonth() + 1) + "-" + this.fecha.getDate();
+
+  fechaFiltro: string = '';
+   // Añade esta línea para almacenar la fecha de filtro
   filtrar(){
+
+    if (this.fechaFiltro) {
+      this.citasPaciente = this.citas.filter(cita => cita.fecha_cita === this.fechaFiltro);
+    } else {
+      this.citasPaciente = this.citas;
+    }
 
   }
 
@@ -54,10 +69,7 @@ export class PacienteComponent implements OnInit {
   constructor() { }
 
 
-  ngOnInit(): void {
 
 
-
-  }
 
 }

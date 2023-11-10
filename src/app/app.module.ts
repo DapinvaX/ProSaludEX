@@ -43,6 +43,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 import { FiltroCitasPacientePipe } from './usuarios/paciente/filtro-citas-paciente.pipe';
 import { FiltroPacientesPipe } from './usuarios/medico/filtro-pacientes.pipe';
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { NewPassComponent } from './new-pass/new-pass.component';
 
 
 
@@ -62,7 +64,9 @@ import { FiltroPacientesPipe } from './usuarios/medico/filtro-pacientes.pipe';
     FooterComponent,
     LoginComponent,
     FiltroCitasPacientePipe,
-    FiltroPacientesPipe
+    FiltroPacientesPipe,
+    ForgotPassComponent,
+    NewPassComponent
 
 
   ],

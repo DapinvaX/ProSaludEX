@@ -1,0 +1,22 @@
+*{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+
+  margin-left: 10px;
+  width: 100px;
+  margin-top: 37px;
+
+}
+
+.botones{
+
+  margin-left: 5px;
+
+}
+
+

@@ -1,0 +1,29 @@
+<!-- FILEPATH: /c:/xampp/htdocs/ProSaludEX/src/app/new-pass/new-pass.component.html -->
+
+<form class="form" method="post" action="">
+ <div class="container">
+
+
+  <div class="row">
+    <div class="col-12">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10 divPrincipal">
+
+
+      <input type="password" class="form-control" id="password1" name="password1" placeholder="Contraseña" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" />
+
+      <input type="password" class="form-control" id="password2" name="password2" placeholder="Repita su Contraseña" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" />
+
+      <button type="submit" class="btn btn-info btnConfirmar">Cambiar Contraseña</button>
+      <button type="button" class="btn btn-info btnAtras" routerLink="inicio">Atrás</button>
+
+    </div>
+    <div class="col-1"></div>
+  </div>
+ </div>
+
+</form>

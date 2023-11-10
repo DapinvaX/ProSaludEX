@@ -41,7 +41,7 @@ editarCita( any: any) {
 eliminarCita(any : any) {
   throw new Error('Method not implemented.');
 
-  
+
 
   }
 
