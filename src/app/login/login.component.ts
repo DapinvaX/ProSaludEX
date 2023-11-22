@@ -13,7 +13,7 @@ import { AuthService } from '../services/Auth/auth.service';
 export class LoginComponent {
 
   /**
-   * Formulario de inicio de sesión.
+   * Formulario para inicio de sesión.
    */
   loginForm: FormGroup;
 
