@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
+//Mis Componentes
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ProfesionalesComponent } from './profesionales/profesionales.component';
@@ -17,13 +17,14 @@ import { CarruselComponent } from './carrusel/carrusel.component';
 import { FooterComponent } from './footer/footer.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LoginComponent } from './login/login.component';
+import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
+import { NewPassComponent } from './new-pass/new-pass.component';
 
-import {MatFormFieldModule} from '@angular/material/form-field';
+//Material
 import {MatIconModule} from '@angular/material/icon';
-import {MatTableModule} from '@angular/material/table';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSelectModule} from '@angular/material/select';
 
+//Componentes MDB
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -40,11 +41,11 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
-
+//Pipes
 import { FiltroCitasPacientePipe } from './usuarios/paciente/filtro-citas-paciente.pipe';
 import { FiltroPacientesPipe } from './usuarios/medico/filtro-pacientes.pipe';
-import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
-import { NewPassComponent } from './new-pass/new-pass.component';
+
+
 
 
 
@@ -66,7 +67,8 @@ import { NewPassComponent } from './new-pass/new-pass.component';
     FiltroCitasPacientePipe,
     FiltroPacientesPipe,
     ForgotPassComponent,
-    NewPassComponent
+    NewPassComponent,
+
 
 
   ],
@@ -75,11 +77,10 @@ import { NewPassComponent } from './new-pass/new-pass.component';
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    MatFormFieldModule,
+
     MatIconModule,
-    MatTableModule,
     MatDatepickerModule,
-    MatSelectModule,
+
 
     MdbAccordionModule,
     MdbCarouselModule,

@@ -12,6 +12,7 @@ import { MedicoComponent } from './usuarios/medico/medico.component';
 import { PacienteComponent } from './usuarios/paciente/paciente.component';
 import { ForgotPassComponent } from './forgot-pass/forgot-pass.component';
 import { NewPassComponent } from './new-pass/new-pass.component';
+import { AdminComponent } from './usuarios/admin/admin.component';
 
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   //Provisional (para probar el componente). Eliminar después.
   { path: 'medico', component: MedicoComponent},
   { path: 'paciente', component: PacienteComponent},
+  { path: 'administrador', component: AdminComponent},
   { path: 'recuperar-contrasena', component: ForgotPassComponent},
   { path: 'nueva-contrasena', component: NewPassComponent},
   //{ path: 'recuperar-contrasena/:token', component: ForgotPassComponent},
@@ -42,8 +44,11 @@ const routes: Routes = [
 
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
+
 export class AppRoutingModule { }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solicitud de Cita</title>
+</head>
+<body>
+  <h1>Solicitud de Cita</h1>
+
+  <form>
+    <label for="dia">Día:</label>
+    <select id="dia" name="dia">
+      <!-- Opciones para el día -->
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+
+    <label for="año">Año:</label>
+    <select id="año" name="año">
+      <!-- Opciones para el año -->
+      <option value="1980">1980</option>
+      <option value="1981">1981</option>
+      <option value="1982">1982</option>
+      <!-- ... -->
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+    </select>
+
+    <label for="motivo">Motivo de la consulta:</label>
+    <input type="text" id="motivo" name="motivo">
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Número de Seguridad Social</th>
+        <th>Motivo</th>
+        <th>Tratamiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Filas de datos del paciente -->
+    </tbody>
+  </table>
+
+</body>
+</html>
