@@ -51,6 +51,7 @@ import { NewPassComponent } from './new-pass/new-pass.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +67,8 @@ import { NewPassComponent } from './new-pass/new-pass.component';
     FiltroCitasPacientePipe,
     FiltroPacientesPipe,
     ForgotPassComponent,
-    NewPassComponent
+    NewPassComponent,
+
 
 
   ],
